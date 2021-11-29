@@ -1,0 +1,16 @@
+<div  layout-fill="" style="min-height:244px">
+<md-toolbar >
+    <div class="md-toolbar-tools">Upload File</div>
+</md-toolbar>
+<div layout="row" layout-align="space-between center">
+    <span>Select File Upload Option</span>
+    <md-select ng-model="option" placeholder="Select Option" class="md-no-underline" required md-no-asterisk="false">
+      <md-option value="draganddrop">Drag And Drop</md-option>
+      <md-option value="selectfile">Choose File</md-option>
+    </md-select>
+  </div>
+  <div ng-show="option=='selectfile'" layout="column">
+    <label class="md-primary">Please Browse The File</label>
+    <input class="ng-hide" nv-file-select="" uploader="uploader" multiple id="input-file-id" multiple type="file" />
+    <label for="input-file-id" class="md-button md-raised md-primary">Choose Files</label>
+  </div>
